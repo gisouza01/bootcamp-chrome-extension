@@ -30,6 +30,13 @@ jobs:
           run: npm run build
           working-directory: ./bootcamp-chrome-extension
 
+        - name: Diagnóstico do diretório e arquivos
+          run: |
+            pwd
+            ls -la
+            echo "Conteúdo de bootcamp-chrome-extension:"
+            ls -la bootcamp-chrome-extension || echo "Pasta não encontrada"
+
         - name: Teste e2e
           run: xvfb-run -a npm run test:e2e
           working-directory: ./bootcamp-chrome-extension
