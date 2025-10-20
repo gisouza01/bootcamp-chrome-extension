@@ -1,0 +1,6 @@
+# Instalar o WSL2
+# Instalar o Docker Desktop
+# Instalar Node.js
+# Playwright
+# Git
+# Instalar o archiver

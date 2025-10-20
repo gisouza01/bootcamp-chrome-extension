@@ -1,0 +1,14 @@
+services:
+  e2e:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - CI=true
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm test
+    shm_size: 2gb
+

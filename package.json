@@ -1,0 +1,15 @@
+{
+  "name": "bootcamp-chrome-extension",
+  "lockfileVersion": 3,
+  "scripts": {
+    "build": "node scripts/build-extensions.mjs",
+    "test:e2e": "playwright test --reporter=list, html",
+    "test": "npm run build && npm run test:e2e"
+  },
+  "requires": true,
+  "packages": {},
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "archiver": "^7.0.1"
+  }
+}
