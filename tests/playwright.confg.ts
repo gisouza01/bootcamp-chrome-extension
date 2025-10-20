@@ -1,11 +1,11 @@
 import { defineConfig, devices } from "@playwright/test";
 import path from "node:path";
 
-const dist = path.join(__dirname, '..', 'dist');
+const dist = path.join(__dirname, 'dist'); // Caminho correto da extensão
 
 export default defineConfig({
-    testDir:__dirname,
-    reporter: [['list'], ['html', { outputFolder: 'playwright-report'}]],
+    testDir: path.join(__dirname, 'tests', 'test.spec'), // Onde estão seus testes
+    reporter: [['list'], ['html', { outputFolder: 'playwright-report' }]],
     projects: [
         {
             name: 'chromium-with-extension',
