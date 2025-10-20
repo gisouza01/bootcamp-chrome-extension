@@ -28,7 +28,7 @@ jobs:
           run: npm run build
 
         - name: Teste e2e
-          run: xvfb-run -a -npm run test:e2e
+          run: xvfb-run -a npm run test:e2e
 
         - name: Publicar o retatório HTML do teste
           if: always()
