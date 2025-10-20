@@ -24,8 +24,8 @@ jobs:
         - name: Instalar Playwright (Chromium + deps)
           run: npx playwright install --with-deps chromium
 
-        - name: build extensão
-          run: Teste e2e
+        - name: Build extensão
+          run: npm run build
 
         - name: Teste e2e
           run: xvfb-run -a -np, run test:e2e
